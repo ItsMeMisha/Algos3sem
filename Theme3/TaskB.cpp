@@ -5,6 +5,14 @@ class Z_Function {
 
 };
 
+class Solution {
+
+public:
+    void read();
+    void write();
+
+};
+
 int main() {
 
 
