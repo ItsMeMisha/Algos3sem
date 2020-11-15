@@ -29,16 +29,6 @@ private:
     Node* position;
    
     void deleteBranch(Node* node);
-
-    void dump(Node* node, int lvl = 2) {
-        for (int i = 0; i < childrenNum; ++i)
-            if (node->children[i] != nullptr)
-                dump(node->children[i], lvl + 1);
-
-        if (node == root)
-            printf ("root: ");
-        printf ("%*c %d\n", lvl, node->value, node->isTerminate);        
-    }
 };
 
 class Solution {
