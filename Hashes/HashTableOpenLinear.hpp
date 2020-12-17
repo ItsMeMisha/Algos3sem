@@ -23,6 +23,7 @@ private:
     void resize();
     void rehash(const size_t coef);
     size_t findPos(const Key& key);
+protected:
     const Hash hashFunc;
     std::vector<Node*> table;
     size_t run(const size_t hash, const size_t iteration);
