@@ -11,11 +11,6 @@ public: void dump();
     Value find(const Key& key, const Value& defVal) override;
     ~LinearHashTable();
 private:
-    struct Node {
-        Node(const Key& key, const Value& val) : key(key), val(val) {}
-        Key key;
-        Value val;
-    };
     const void* Tombstone;
     const size_t baseSize = 1024;
     size_t curSize = 0;
@@ -24,6 +19,12 @@ private:
     void rehash(const size_t coef);
     size_t findPos(const Key& key);
 protected:
+    struct Node {
+        Node(const Key& key, const Value& val) : key(key), val(val) {}
+        Key key;
+        Value val;
+    };
+
     const Hash hashFunc;
     std::vector<Node*> table;
     size_t run(const size_t hash, const size_t iteration);
