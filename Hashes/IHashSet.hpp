@@ -1,7 +1,7 @@
-template<typename T>
+template<typename Key, typename Value>
 class IHashSet {
 public:
-    virtual void add(const T& key) = 0;
-    virtual void remove(const T& key) = 0;
-    virtual bool find(const T& key) = 0;
+    virtual void add(const Key& key, const Value& val) = 0;
+    virtual void remove(const Key& key) = 0;
+    virtual Value find(const Key& key) = 0;
 };
