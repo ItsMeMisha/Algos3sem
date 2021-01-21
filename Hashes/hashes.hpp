@@ -122,4 +122,44 @@ namespace hashes {
     size_t Hash<Key>::operator() (const Key& key) const {
         return sizeof(key);
     }
+
+    size_t MD5<int>::operator() (const int& key) const {
+
+    }
+
+    size_t MD5<std::string>::operator() (const std::string& key) const {
+
+    }
+
+    size_t SHA256<int>::operator() (const int& key) const {
+
+    }
+
+    size_t SHA256<std::string>::operator() (const std::string& key) const {
+
+    }
+
+    size_t DNA<std::string>::operator() (const std::string& key) const {
+
+    }
+
+    size_t Rolling<std::string>::operator() (const std::string& key) const {
+
+    }
+
+    size_t Murmur3<int>::operator() (const int& key) const {
+
+    }
+
+    size_t Murmur3<std::string>::operator() (const std::string& key) const {
+
+    }
+
+    size_t Tabulation<int>::operator() (const int& key) const {
+
+    }
+
+    size_t Simple<int>::operator() (const int& key) const {
+
+    }
 }
